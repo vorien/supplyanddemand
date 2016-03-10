@@ -83,7 +83,7 @@ class MapController extends AppController {
 		echo(json_encode($routeinventories, JSON_NUMERIC_CHECK));
 	}
 
-	public function map($user_id = 1, $region_id = 1) {
+	public function index($user_id = 1, $region_id = 1) {
 		$data = TableRegistry::get('UserPreferences');
 		$query = $data->find();
 		$query->hydrate(false);
@@ -176,7 +176,7 @@ class MapController extends AppController {
 //		$this->render('test');
 	}
 
-	public function index() {
+	public function index_old() {
 		$data = TableRegistry::get('Locations');
 		$query = $data->find();
 
